@@ -5,6 +5,7 @@ target/
 .idea
 classes/
 META-INF/
+.metadata/
   
 # OS Files #
 .DS_Store
@@ -16,6 +17,7 @@ META-INF/
 *.war
 *.ear
 *.db
+*.metadata
   
 ######################
 # Windows
