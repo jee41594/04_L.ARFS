@@ -28,17 +28,17 @@
 		</environment>
 	</environments>
 	<mappers>
-<!-- 		<mapper url="file:///${lempCustHome}/conf/sql/${DATABASE}/TT0001.xml" />
+		<mapper url="file:///${lempCustHome}/conf/sql/${DATABASE}/TT0001.xml" />
 		<mapper url="file:///${lempCustHome}/conf/sql/${DATABASE}/TT0002.xml" />
-		<mapper url="file:///${lempCustHome}/conf/sql/${DATABASE}/TT0003.xml" />
-		<mapper url="file:///${lempCustHome}/conf/sql/${DATABASE}/TT0004.xml" />
-		<mapper url="file:///${lempCustHome}/conf/sql/${DATABASE}/TT0005.xml" />
-		<mapper url="file:///${lempCustHome}/conf/sql/${DATABASE}/TT0006.xml" />
-		<mapper url="file:///${lempCustHome}/conf/sql/${DATABASE}/TT0007.xml" />
-		<mapper url="file:///${lempCustHome}/conf/sql/${DATABASE}/TT0008.xml" />
-		<mapper url="file:///${lempCustHome}/conf/sql/${DATABASE}/TT0009.xml" />
-		<mapper url="file:///${lempCustHome}/conf/sql/${DATABASE}/TT0010.xml" />
-		<mapper url="file:///${lempCustHome}/conf/sql/${DATABASE}/TT0011.xml" />
-		<mapper url="file:///${lempCustHome}/conf/sql/${DATABASE}/TT0012.xml" /> -->
+<!-- 		<mapper url="file:///${lempCustHome}/conf/sql/${DATABASE}/TT0003.xml" /> -->
+<!-- 		<mapper url="file:///${lempCustHome}/conf/sql/${DATABASE}/TT0004.xml" /> -->
+<!-- 		<mapper url="file:///${lempCustHome}/conf/sql/${DATABASE}/TT0005.xml" /> -->
+<!-- 		<mapper url="file:///${lempCustHome}/conf/sql/${DATABASE}/TT0006.xml" /> -->
+<!-- 		<mapper url="file:///${lempCustHome}/conf/sql/${DATABASE}/TT0007.xml" /> -->
+<!-- 		<mapper url="file:///${lempCustHome}/conf/sql/${DATABASE}/TT0008.xml" /> -->
+<!-- 		<mapper url="file:///${lempCustHome}/conf/sql/${DATABASE}/TT0009.xml" /> -->
+<!-- 		<mapper url="file:///${lempCustHome}/conf/sql/${DATABASE}/TT0010.xml" /> -->
+<!-- 		<mapper url="file:///${lempCustHome}/conf/sql/${DATABASE}/TT0011.xml" /> -->
+<!-- 		<mapper url="file:///${lempCustHome}/conf/sql/${DATABASE}/TT0012.xml" />  -->
 	</mappers>
 </configuration>

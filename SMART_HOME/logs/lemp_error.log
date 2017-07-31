@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ERROR 2017-07-25 16:06:09,329 [main] [kr.co.ldcc.lemp.hybrid.server.web.service.ServicePauseInterceptorService]                 Has occur error during loading servicePauseInterceptorConfig.xml
 ERROR 2017-07-25 16:06:09,462 [main] [kr.co.ldcc.lemp.db.common.MyBatisConfig]                 Error initializing mybatis. Cause: 
 org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.io.FileNotFoundException: C:\Users\LOTTE\workspace\SMART_HOME\conf\sql\ORACLE\TT0001.xml (지정된 경로를 찾을 수 없습니다)
@@ -88,3 +89,6 @@ Caused by: java.lang.RuntimeException: Error initializing mybatis. Cause:org.apa
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1549) ~[spring-beans-3.2.3.RELEASE.jar:3.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1479) ~[spring-beans-3.2.3.RELEASE.jar:3.2.3.RELEASE]
 	... 27 more
+=======
+ERROR 2017-07-31 09:21:26,962 [main] [kr.co.ldcc.lemp.hybrid.server.web.service.ServicePauseInterceptorService]                 Has occur error during loading servicePauseInterceptorConfig.xml
+>>>>>>> 92438bb100583354f95ec30361fb288f996b7c67

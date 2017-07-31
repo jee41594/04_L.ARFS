@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+ <button onclick="m()">click</button>
+ 
+ <script type="text/javascript">
+ 
+ 	function m(){
+		loation.href="http://localhost:8080/lemp-server/LOGIN.json?message=%7B"body":%7B"phone_number":"","emulator_flag":true,"app_key":"LN04ANP0","device_id":"1","user_id":"","password":"","manual_phone_number":true,"os_type":"Android","legacy_message":%7B"body":%7B"userId":"kimih","password":"1234"%7D,"header":%7B"device_id":"","error_code":"","error_text":"","info_text":"","login_session_id":"","message_version":"","model":"","os_type":"","os_version":"","result":true,"trcode":"DM0001"%7D%7D,"legacy_trcode":"DM0001"%7D,"header":%7B"result":false,"is_cryption":false,"info_text":"","login_session_id":"","error_text":"","message_version":"","error_code":"","trcode":"LOGIN"%7D%7D"
+ 		
+ 	}
+ </script>
+	
+</body>
+</html>

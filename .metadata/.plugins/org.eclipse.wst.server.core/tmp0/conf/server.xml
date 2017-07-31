@@ -131,7 +131,7 @@
                prefix="localhost_access_log." suffix=".txt" pattern="common" resolveHosts="false"/>
         -->
 
-      <Context docBase="C:\Users\LOTTE\workspacePJT\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\LOTTE\workspacePJT\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\LARFSClient" path="/LARFSClient" reloadable="true" source="org.eclipse.jst.jee.server:LARFSClient"/><Context docBase="C:\Users\LOTTE\workspacePJT\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\lemp-server" path="/lemp-server" reloadable="true" source="org.eclipse.jst.jee.server:lemp-server"/><Context docBase="C:\Users\LOTTE\workspacePJT\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\lempBoard" path="/lempBoard" reloadable="true" source="org.eclipse.jst.jee.server:lempBoard"/></Host>
+      <Context docBase="C:\LARFS\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\LARFS\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\LARFSClient" path="/LARFSClient" reloadable="true" source="org.eclipse.jst.jee.server:LARFSClient"/><Context docBase="C:\LARFS\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\lemp-server" path="/lemp-server" reloadable="true" source="org.eclipse.jst.jee.server:lemp-server"/><Context docBase="C:\LARFS\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\lempBoard" path="/lempBoard" reloadable="true" source="org.eclipse.jst.jee.server:lempBoard"/></Host>
     </Engine>
   </Service>
 </Server>

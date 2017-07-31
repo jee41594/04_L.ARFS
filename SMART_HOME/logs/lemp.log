@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INFO 2017-07-25 15:25:39,447 [main] [kr.co.ldcc.lemp.hybrid.server.core.MessageProcessorFactory]  ============ Starting to register MessageProcessor... ==============
 INFO 2017-07-25 15:25:39,448 [main] [kr.co.ldcc.lemp.hybrid.server.core.MessageProcessorFactory]  ============ Finished to register "1" MessageProcessors as spring bean!  ==============
 INFO 2017-07-25 15:25:40,399 [main] [kr.co.ldcc.lemp.hybrid.adapter.loaders.AnnotationBeanAdapterLoader]  Start::register()
@@ -211,3 +212,28 @@ Caused by: java.lang.RuntimeException: Error initializing mybatis. Cause:org.apa
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1549) ~[spring-beans-3.2.3.RELEASE.jar:3.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1479) ~[spring-beans-3.2.3.RELEASE.jar:3.2.3.RELEASE]
 	... 27 more
+=======
+INFO 2017-07-31 09:21:21,554 [main] [kr.co.ldcc.lemp.hybrid.server.core.MessageProcessorFactory]  ============ Starting to register MessageProcessor... ==============
+INFO 2017-07-31 09:21:21,557 [main] [kr.co.ldcc.lemp.hybrid.server.core.MessageProcessorFactory]  ============ Finished to register "1" MessageProcessors as spring bean!  ==============
+INFO 2017-07-31 09:21:26,796 [main] [kr.co.ldcc.lemp.hybrid.adapter.loaders.AnnotationBeanAdapterLoader]  Start::register()
+INFO 2017-07-31 09:21:26,798 [main] [kr.co.ldcc.lemp.hybrid.adapter.loaders.AnnotationBeanAdapterLoader]  Register Adapter: The trcode DM0001 was found and registered by bean DM0001_Adapter!
+INFO 2017-07-31 09:21:26,798 [main] [kr.co.ldcc.lemp.hybrid.adapter.loaders.AnnotationBeanAdapterLoader]  Register Adapter: The trcode TT0002 was found and registered by bean DM0002_Adapter!
+INFO 2017-07-31 09:21:26,799 [main] [kr.co.ldcc.lemp.hybrid.adapter.loaders.AnnotationBeanAdapterLoader]  Register Adapter: The trcode DM0004 was found and registered by bean DM0004_Adapter!
+INFO 2017-07-31 09:21:26,799 [main] [kr.co.ldcc.lemp.hybrid.adapter.loaders.AnnotationBeanAdapterLoader]  Register Adapter: The trcode DM0006 was found and registered by bean DM0006_Adapter!
+INFO 2017-07-31 09:21:26,799 [main] [kr.co.ldcc.lemp.hybrid.adapter.loaders.AnnotationBeanAdapterLoader]  Register Adapter: The trcode T40001 was found and registered by bean t40001_Adapter!
+INFO 2017-07-31 09:21:26,799 [main] [kr.co.ldcc.lemp.hybrid.adapter.loaders.AnnotationBeanAdapterLoader]  Register Adapter: The trcode LOGIN was found and registered by bean LOGIN_ADT!
+INFO 2017-07-31 09:21:26,799 [main] [kr.co.ldcc.lemp.hybrid.adapter.loaders.AnnotationBeanAdapterLoader]  Register Adapter: The trcode ZZ0004 was found and registered by bean ZZ0004_ADT_GetFileUID!
+INFO 2017-07-31 09:21:26,800 [main] [kr.co.ldcc.lemp.hybrid.adapter.loaders.AnnotationBeanAdapterLoader]  Register Adapter: The trcode ZZ0005 was found and registered by bean ZZ0005_ADT_DeviceActivation!
+INFO 2017-07-31 09:21:26,800 [main] [kr.co.ldcc.lemp.hybrid.adapter.loaders.AnnotationBeanAdapterLoader]  Register Adapter: The trcode ZZ0006 was found and registered by bean ZZ0006_ADT_Update!
+INFO 2017-07-31 09:21:26,800 [main] [kr.co.ldcc.lemp.hybrid.adapter.loaders.AnnotationBeanAdapterLoader]  Register Adapter: The trcode ZZ0007 was found and registered by bean ZZ0007_ADT_NoticeList!
+INFO 2017-07-31 09:21:26,800 [main] [kr.co.ldcc.lemp.hybrid.adapter.loaders.AnnotationBeanAdapterLoader]  Register Adapter: The trcode ZZ0008 was found and registered by bean ZZ0008_ADT_VerifyHash!
+INFO 2017-07-31 09:21:26,801 [main] [kr.co.ldcc.lemp.hybrid.adapter.loaders.AnnotationBeanAdapterLoader]  Register Adapter: The trcode ZZ0010 was found and registered by bean ZZ0010_ADT_GetCiperKey!
+INFO 2017-07-31 09:21:26,801 [main] [kr.co.ldcc.lemp.hybrid.adapter.loaders.AnnotationBeanAdapterLoader]  Register Adapter: The trcode ZZ0011 was found and registered by bean ZZ0011_ADT_KeyShare!
+INFO 2017-07-31 09:21:26,801 [main] [kr.co.ldcc.lemp.hybrid.adapter.loaders.AnnotationBeanAdapterLoader]  End::register
+ERROR 2017-07-31 09:21:26,962 [main] [kr.co.ldcc.lemp.hybrid.server.web.service.ServicePauseInterceptorService]  Has occur error during loading servicePauseInterceptorConfig.xml
+INFO 2017-07-31 09:21:26,990 [main] [kr.co.ldcc.lemp.journal.IntegrationJournalService]  Journal Service : true
+INFO 2017-07-31 09:21:28,558 [main] [kr.co.ldcc.lemp.db.common.MyBatisConfig]  Success to load SampleSqlMapConfig.xml
+INFO 2017-07-31 09:21:28,643 [main] [kr.co.ldcc.lemp.db.common.MyBatisConfig]  Success to load journalDB_SqlMapConfig.xml
+INFO 2017-07-31 09:21:29,165 [main] [kr.co.ldcc.lemp.db.common.MyBatisConfig]  Success to load LEMPDB_SqlMapConfig.xml
+INFO 2017-07-31 09:21:32,182 [main] [kr.co.ldcc.lemp.hybrid.server.web.control.MessageController]  New Seed : 584328534
+>>>>>>> 92438bb100583354f95ec30361fb288f996b7c67
