@@ -42,7 +42,7 @@
 		username="LEMP" 
 		password="LEMP"
 		driverClassName="oracle.jdbc.OracleDriver"
-		url="jdbc:oracle:thin:@127.0.0.1:1521:lala"
+		url="jdbc:oracle:thin:@10.131.123.6:1521:xe"
 	  />
 
     <!-- LEMP -->
@@ -57,7 +57,7 @@
   		username="LARFS" 
   		password="LARFS"
   		driverClassName="oracle.jdbc.OracleDriver"
-  		url="jdbc:oracle:thin:@127.0.0.1:1521:lala" 
+  		url="jdbc:oracle:thin:@10.131.123.6:1521:xe" 
   	/>
 
 </Context>
