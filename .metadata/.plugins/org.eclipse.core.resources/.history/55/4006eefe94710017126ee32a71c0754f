@@ -1,0 +1,72 @@
+LEMP.addEvent("backbutton", "page.callbackBackButton");
+
+var page = {
+
+	init : function(event) {
+		page.initInterface();
+	},
+
+	initInterface : function() {
+		$(".notice").click(function() {
+			alert("1");
+			LEMP.Window.open({
+				"_sPagePath" : "NTC/html/NTC0001.html",
+				"_sTitleBar" : "BBS001"
+			});
+		});
+		$(".approval").click(function() {
+			alert("2");
+			LEMP.Window.open({
+				"_sPagePath" : "NTC/html/NTC0002.html",   /*수정필요*/
+				"_sTitleBar" : "BBS001"
+			});
+		});
+		$(".mail").click(function() {
+			alert("3");
+			LEMP.Window.open({
+				"_sPagePath" : "NTC/html/NTC0003.html",   /*수정필요*/
+				"_sTitleBar" : "BBS001"
+			});
+		});
+		$(".member").click(function() {
+			alert("4");
+			LEMP.Window.open({
+				"_sPagePath" : "NTC/html/NTC0003.html",   /*수정필요*/
+				"_sTitleBar" : "BBS001"
+			});
+		});
+		
+	},
+
+	callbackBackButton : function() {
+		
+		// confirm 창 만들기
+		// text button 2개 create(확인, 취소)
+		var textButton1 = LEMP.Window.createElement({
+			"_sElementName" : "TextButton"
+		});
+		
+		var textButton2 = LEMP.Window.createElement({
+			"_sElementName" : "TextButton"
+		});
+
+		textButton1.setProperty({
+			"_sText" : "확인",
+			"_fCallback" : function() {
+				LEMP.Window.open({
+					"_sPagePath" : "LGN/html/LGN0001.html"
+				})
+			}
+		});
+
+		textButton2.setProperty({
+			"_sText" : "취소"
+		});
+
+		LEMP.Window.confirm({
+			"_sTitle" : "알림",
+			"_vMessage" : "로그아웃 하시겠습니까?",
+			"_aTextButton" : [ textButton1, textButton2 ]
+		});
+	}
+};

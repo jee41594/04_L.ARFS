@@ -1,0 +1,11 @@
+                                                           package step01.one;
+
+import java.util.Stack;
+
+public class TotalReview {
+	String name = "김혜경";
+	static int age = 10;
+	public static void main(String[] args) {
+	}
+
+}

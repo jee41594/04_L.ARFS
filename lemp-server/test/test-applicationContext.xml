@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<import resource="file:///${lempCoreHome}/applicationcontext/applicationcontext-adapter.xml"/>
+	<import resource="file:///${lempCoreHome}/applicationcontext/applicationcontext-auth.xml"/>
+	<import resource="file:///${lempCoreHome}/applicationcontext/applicationcontext-cache.xml"/>
+	<import resource="file:///${lempCoreHome}/applicationcontext/applicationcontext-mandator.xml"/>
+	<import resource="file:///${lempCoreHome}/applicationcontext/applicationcontext-resources.xml"/>
+	<import resource="file:///${lempCoreHome}/applicationcontext/applicationcontext-servicePause.xml"/>
+	<import resource="file:///${lempCoreHome}/applicationcontext/applicationcontext-webapp.xml"/>
+	
+	<!-- <aop:aspectj-autoproxy />
+	LEGACY AUDIT AOP
+	<bean class="kr.co.ldcc.lemp.adapter.aspect.AuditAspect"/>  -->
+</beans>

@@ -1,0 +1,26 @@
+                                                           package step01.one;
+
+import java.io.ObjectInputStream.GetField;
+import java.util.Stack;
+
+public class TotalReview {
+	String name = "김혜경";
+	static int age = 10;
+	TotalReview(){}
+	
+	String getName(String name){
+		return name;
+		
+	}
+	
+	static void print(){
+		System.out.println("static method");
+	}
+	public static void main(String[] args) {
+		TotalReview t = new TotalReview();
+		String v;
+		getName(v);
+		
+	}
+
+}

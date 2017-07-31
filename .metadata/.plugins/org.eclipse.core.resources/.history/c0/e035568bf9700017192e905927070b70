@@ -1,0 +1,20 @@
+package step01.one;
+
+public class Child {
+
+
+	public class child extends Parent{
+		String grade;
+		child() {
+		System.out.println("자식");
+		}
+	}
+	void printAll(){
+		System.out.println(id);
+	}
+	public static void main(String[] args) {
+		
+
+	}
+
+}

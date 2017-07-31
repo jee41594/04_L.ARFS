@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="lemp-server">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="lemp-model.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/lemp-model/lemp-model">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="lemp-adapter.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/lemp-adapter/lemp-adapter">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="lemp-server"/>
+        <property name="java-output-path" value="/lemp-server/build/classes"/>
+    </wb-module>
+</project-modules>

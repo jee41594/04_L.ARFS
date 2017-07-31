@@ -1,0 +1,16 @@
+var page = {
+		
+	init:function()
+	{
+		page.initInterface();
+	},
+	
+	initInterface : function()
+	{
+		$("#board").click(function(){
+			LEMP.Window.open({
+			    "_sPagePath" : "MAN/html/MAN0001.html"
+			});
+		});
+	}
+};

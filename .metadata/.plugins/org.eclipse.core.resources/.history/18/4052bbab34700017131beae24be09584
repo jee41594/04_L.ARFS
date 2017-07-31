@@ -1,0 +1,16 @@
+package step01.one;
+
+public class StaticTest {
+
+	StaticTest(){
+		a++;
+		b++;
+	}
+	public static void main(String[] args) {
+		StaticTest s = new StaticTest();
+		
+		System.out.println(a+b);
+
+	}
+
+}

@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+/* 게시판 목록 */
+.board_box li {position:relative; padding-left:50px; background:url("../images/ico_board.png") no-repeat 5px center; -webkit-background-size:40px auto; background-size:40px auto;}
+.board_box li strong {display:inline-block; max-width:80%; max-width:-webkit-calc(100% - 40px); max-width:-moz-calc(100% - 40px); font-weight:normal; text-overflow:ellipsis; vertical-align:middle; white-space:nowrap; overflow:hidden;}
+.board_box li .count {margin-left:5px; vertical-align:middle;}
+.board_box li .count:before {content:"(";}
+.board_box li .count:after {content:")";}

@@ -1,0 +1,15 @@
+package step01.one;
+
+public class Parent {
+	String id ;
+	int pw;
+	
+	Parent() {
+		super();
+		System.out.println("부모");
+	}
+	void printAll(){
+		System.out.println(id);
+		System.out.println(pw);
+	}
+}

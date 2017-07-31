@@ -1,0 +1,14 @@
+package javatest;
+
+public class javaTest {
+
+	
+	
+	 String memName ="";
+	 int memAge = 0 ;
+	 
+	 public static void main() {
+		
+	}
+	 
+}

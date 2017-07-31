@@ -1,0 +1,58 @@
+package step03;
+
+/*
+ * 순수 데이터 저장 및 제공해주는 데이터용 클래스
+ * 1. DTO: Data Transfer Object Pattern
+ * 2. 전세계 개발자 코드 동일
+ * 3. JSP라는 서버 데이터를 client 브라우저에 출력할 수 있는 web 처리 기술
+ *   명명 규칙에 어긋나는 코드는 비정상 실행
+ * 
+ */
+public class PersonDTO {
+ private String name;// 멤버변수
+ private int age;
+ private String address;
+ public String getAddress() {
+  return address;
+ }
+ public void setAddress(String address) {
+  this.address = address;
+ }
+ public PersonDTO() {
+ }
+ public PersonDTO(String name, int age) { // 로컬변수
+  /*
+   * 멤버 변수와 로컬 변수명이 일치될 경우 반드시 멤버 변수임을 지정(this 키워드 활용) 멤버 변수임을 지정 (this
+   * 키워드 활용)
+   */
+  this.name = name;
+  setAge(age);
+ }
+ public PersonDTO(String name, int age, String a) {
+  this.name = name;
+  setAge(age);
+  address = a;
+ }
+ public String toString() {
+  return "PersonDTO [name = " + name + ", age=" + age + ", addres="
+    + address + "]";
+ }
+ public String getName() {// name 변수값 반환
+  return name;
+ }
+ public void setName(String name) {// name 변수값 수정
+  this.name = name;
+ }
+ public int getAge() {
+  return age;
+ }
+ public void setAge(int age) {
+  if (age > 0) {
+   this.age = age;
+  } else {
+   System.out.println("무효한 나이값 입니다.");
+  }
+ }
+
+}
+ 

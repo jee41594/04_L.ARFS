@@ -1,0 +1,13 @@
+package step01.one;
+
+public class Test2 {
+	
+	int m(int i, int j, int k){
+		
+		return i+j+k;
+	}
+
+	public static void main(String[] args) {
+	}
+
+}

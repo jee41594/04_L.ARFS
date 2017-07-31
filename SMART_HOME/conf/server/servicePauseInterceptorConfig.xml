@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>	
+	<entry key="isService">true</entry>
+	<entry key="dateFormat">yyyyMMdd hhmm</entry>
+	<entry key="startDate">20141230 1000</entry>
+	<entry key="endDate">20141230 1800</entry>
+	<entry key="comment">서비스 중단 테스트 입니다.</entry>
+</properties>

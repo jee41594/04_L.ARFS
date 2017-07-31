@@ -1,0 +1,7 @@
+package javatest;
+
+public class userInfo {
+
+	private String name;
+	private int age;
+}

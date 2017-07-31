@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lempConfiguration>
+	<!-- 기본설정 -->
+	<baseConfig>
+		<customHome comment="SMART_HOME 위치로 첫번째 SMART_HOME이 존재하지 않으면 그 다음 SMART_HOME을 찾는다.">
+			C:/Users/LOTTE/workspace/SMART_HOME
+		</customHome>
+			
+		<isJournalService comment="통계데이터 수집 여부">true</isJournalService>
+		<isEmulatorService comment="웹에뮬레이터 사용여부">true</isEmulatorService>
+		<isReloaderbleAdapterService comment="어댑터 자동리로드 서비스">false</isReloaderbleAdapterService>
+	</baseConfig>
+	
+	<!-- 인증방법 -->
+	<authConfig comment="인증 모드 및 인증방법 선택">
+		<authMode comment="b2b, b2c">b2c</authMode>
+		<authOrder comment="인증순서 : lemp, legacy">
+			<first>lemp</first>
+			<second>legacy</second>
+		</authOrder>
+		<authMethod comment="db, file">db</authMethod>
+	</authConfig>
+	
+	<sessionConfig>
+		<isSessionValidationService>false</isSessionValidationService>		
+		<sessionType comment="fixed, flexible">flexible</sessionType>
+		<expireTime comment="해당분동안 아무런 동작이 없을경우 cache메모리에서 삭제되는 시간">30</expireTime>
+		<policy comment="freeUsers : 멀티로그인 허용, onlyFirstUser : 처음 로그인한 사람의 세션을 유지, onlyLastUser : 마지막에 로그인한 사람의 세션을 유지">freeUsers</policy>
+		<kickoutServerInfoList>
+			<kickoutServerInfo>
+				<scheme>http</scheme>
+				<host>192.168.0.3</host>
+				<port>8089</port>
+				<path>lemp-server</path>
+			</kickoutServerInfo>			
+		</kickoutServerInfoList>
+	</sessionConfig>
+	
+	<!-- MDM -->
+	<mdmConfig comment="MDM 버전, basic, premieum">
+		<mode>basic</mode>
+	</mdmConfig>
+	
+</lempConfiguration>

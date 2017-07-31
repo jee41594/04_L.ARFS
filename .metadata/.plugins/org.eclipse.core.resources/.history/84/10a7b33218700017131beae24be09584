@@ -1,0 +1,9 @@
+package javatest;
+
+public class javaTest {
+
+	
+	
+	 String memName = '';
+	 
+}

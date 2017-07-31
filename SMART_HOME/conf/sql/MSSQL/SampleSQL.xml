@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BIZBOX">
+    
+    <!--  ==================== SELECT ====================  -->
+    <select id="getdeptList" resultType="Map">
+		SELECT 
+			DEPT_ID as deptID, PAR_DEPT_ID as parentId, LEAF_YN as isPerson, 
+			DEPT_NM as deptName, STEP as depth
+		FROM 
+			TCMG_DEPT 
+		WHERE 
+			USE_YN = '1' and deptwork_id = '2'
+		ORDER BY par_dept_id asc, dept_id asc		
+    </select>
+    
+    <select id="getContactByAllList" resultType="Map">
+    	<![CDATA[
+		SELECT
+			C.co_nm AS company_name,	 
+			D.dept_id, 
+			D.dept_nm AS department, 
+			U.user_id AS contact_uid, 
+			U.user_nm AS full_name, 
+			U.email_id + '@' + C.c_domain AS email, 
+			UD.tel1 + '-' + UD.tel2 + '-' + UD.tel3 + '(' + UD.tel4 + ')' AS company_telephone, 
+			U.tel1 + '-' + U.tel2 + '-' + U.tel3 AS home_tell, 
+			U.mobile1+'-'+U.mobile2+'-'+U.mobile3 AS  mobile_number, 
+			UD.fax1 + '-' + UD.fax2 + '-' + UD.fax3 AS fax_number, 						
+			U.zip_addr, 
+			U.detail_addr, 
+			U.zip_cd, 
+			U.char_biz, 
+			case U.photo_nm when '' then 'http://218.55.79.87/KOR_WEBROOT/IMAGE/COMMON/nopic.gif' else 'http://218.55.79.87/KOR_WEBROOT/UPLOAD/346/EMPPIC/'  +  U.photo_nm End as photoUrl,  
+    		GRA.CD_NM as grade,
+    		DT.CD_NM as title
+		FROM 
+			TCMG_USER U 
+			INNER JOIN TCMG_USERDEPT UD ON U.user_id = UD.user_id 
+			INNER JOIN TCMG_DEPT D ON UD.dept_id = D.dept_id AND D.USE_YN = 1 
+			INNER JOIN TCMG_WORK W ON UD.deptwork_id = W.dept_id AND W.USE_YN = 1 
+			INNER JOIN TCMG_CO C ON C.co_id = D.co_id AND C.USE_YN = 1 
+    		LEFT OUTER JOIN DBO.FCMT_CD(1, 1,'GRADE') GRA ON GRA.CD_VAL = UD.GRADE
+    		LEFT OUTER JOIN DBO.FCMT_CD(1, 1, 'DUTY') DT ON DT.CD_VAL = UD.DUTY
+		WHERE 
+			U.fire_yn <> 0 and UD.hold_office <> 3
+		ORDER BY UD.duty asc, UD.grade asc
+		]]>
+    </select>
+    
+    <select id="getContactByEmailList" parameterType="String" resultType="Map">
+    	<![CDATA[
+		SELECT
+			C.co_nm AS company_name,	 
+			D.dept_id, 
+			D.dept_nm AS department, 
+			U.user_id AS contact_uid, 
+			U.user_nm AS full_name, 
+			U.email_id + '@' + C.c_domain AS email, 
+			UD.tel1 + '-' + UD.tel2 + '-' + UD.tel3 + '(' + UD.tel4 + ')' AS company_telephone, 
+			U.tel1 + '-' + U.tel2 + '-' + U.tel3 AS home_tell, 
+			U.mobile1+'-'+U.mobile2+'-'+U.mobile3 AS  mobile_number, 
+			UD.fax1 + '-' + UD.fax2 + '-' + UD.fax3 AS fax_number, 						
+			U.zip_addr, 
+			U.detail_addr, 
+			U.zip_cd, 
+			U.char_biz, 
+			case U.photo_nm when '' then 'http://218.55.79.87/KOR_WEBROOT/IMAGE/COMMON/nopic.gif' else 'http://218.55.79.87/KOR_WEBROOT/UPLOAD/346/EMPPIC/'  +  U.photo_nm End as photoUrl, 
+    		GRA.CD_NM as grade,
+    		DT.CD_NM as title
+		FROM 
+			TCMG_USER U 
+			INNER JOIN TCMG_USERDEPT UD ON U.user_id = UD.user_id 
+			INNER JOIN TCMG_DEPT D ON UD.dept_id = D.dept_id AND D.USE_YN = 1 
+			INNER JOIN TCMG_WORK W ON UD.deptwork_id = W.dept_id AND W.USE_YN = 1 
+			INNER JOIN TCMG_CO C ON C.co_id = D.co_id AND C.USE_YN = 1 
+    		LEFT OUTER JOIN DBO.FCMT_CD(1, 1,'GRADE') GRA ON GRA.CD_VAL = UD.GRADE
+    		LEFT OUTER JOIN DBO.FCMT_CD(1, 1, 'DUTY') DT ON DT.CD_VAL = UD.DUTY
+		WHERE 
+			U.fire_yn <> 0 and UD.hold_office <> 3 and (email_id + '@' + c_domain) like '%' + #{keyword} + '%'
+		ORDER BY UD.duty asc, UD.grade asc
+		]]>
+    </select>
+    
+    <select id="getContactByNameList" parameterType="String" resultType="Map">
+    	<![CDATA[
+		SELECT
+			C.co_nm AS company_name,	 
+			D.dept_id, 
+			D.dept_nm AS department, 
+			U.user_id AS contact_uid, 
+			U.user_nm AS full_name, 
+			U.email_id + '@' + C.c_domain AS email, 
+			UD.tel1 + '-' + UD.tel2 + '-' + UD.tel3 + '(' + UD.tel4 + ')' AS company_telephone, 
+			U.tel1 + '-' + U.tel2 + '-' + U.tel3 AS home_tell, 
+			U.mobile1+'-'+U.mobile2+'-'+U.mobile3 AS  mobile_number, 
+			UD.fax1 + '-' + UD.fax2 + '-' + UD.fax3 AS fax_number, 						
+			U.zip_addr, 
+			U.detail_addr, 
+			U.zip_cd, 
+			U.char_biz, 
+			case U.photo_nm when '' then 'http://218.55.79.87/KOR_WEBROOT/IMAGE/COMMON/nopic.gif' else 'http://218.55.79.87/KOR_WEBROOT/UPLOAD/346/EMPPIC/'  +  U.photo_nm End as photoUrl, 
+    		GRA.CD_NM as grade,
+    		DT.CD_NM as title
+		FROM 
+			TCMG_USER U 
+			INNER JOIN TCMG_USERDEPT UD ON U.user_id = UD.user_id 
+			INNER JOIN TCMG_DEPT D ON UD.dept_id = D.dept_id AND D.USE_YN = 1 
+			INNER JOIN TCMG_WORK W ON UD.deptwork_id = W.dept_id AND W.USE_YN = 1 
+			INNER JOIN TCMG_CO C ON C.co_id = D.co_id AND C.USE_YN = 1 
+    		LEFT OUTER JOIN DBO.FCMT_CD(1, 1,'GRADE') GRA ON GRA.CD_VAL = UD.GRADE
+    		LEFT OUTER JOIN DBO.FCMT_CD(1, 1, 'DUTY') DT ON DT.CD_VAL = UD.DUTY
+		WHERE 
+			U.fire_yn <> 0 and UD.hold_office <> 3 and U.user_nm like '%' + #{keyword} + '%'
+		ORDER BY UD.duty asc, UD.grade asc
+		]]>
+    </select>
+    
+    <select id="getContactByDeptList" parameterType="String" resultType="Map">
+    	<![CDATA[
+		SELECT
+			C.co_nm AS company_name,	 
+			D.dept_id, 
+			D.dept_nm AS department, 
+			U.user_id AS contact_uid, 
+			U.user_nm AS full_name, 
+			U.email_id + '@' + C.c_domain AS email, 
+			UD.tel1 + '-' + UD.tel2 + '-' + UD.tel3 + '(' + UD.tel4 + ')' AS company_telephone, 
+			U.tel1 + '-' + U.tel2 + '-' + U.tel3 AS home_tell, 
+			U.mobile1+'-'+U.mobile2+'-'+U.mobile3 AS  mobile_number, 
+			UD.fax1 + '-' + UD.fax2 + '-' + UD.fax3 AS fax_number, 						
+			U.zip_addr, 
+			U.detail_addr, 
+			U.zip_cd, 
+			U.char_biz, 
+			case U.photo_nm when '' then 'http://218.55.79.87/KOR_WEBROOT/IMAGE/COMMON/nopic.gif' else 'http://218.55.79.87/KOR_WEBROOT/UPLOAD/346/EMPPIC/'  +  U.photo_nm End as photoUrl, 
+    		GRA.CD_NM as grade,
+    		DT.CD_NM as title
+		FROM 
+			TCMG_USER U 
+			INNER JOIN TCMG_USERDEPT UD ON U.user_id = UD.user_id 
+			INNER JOIN TCMG_DEPT D ON UD.dept_id = D.dept_id AND D.USE_YN = 1 
+			INNER JOIN TCMG_WORK W ON UD.deptwork_id = W.dept_id AND W.USE_YN = 1 
+			INNER JOIN TCMG_CO C ON C.co_id = D.co_id AND C.USE_YN = 1 
+    		LEFT OUTER JOIN DBO.FCMT_CD(1, 1,'GRADE') GRA ON GRA.CD_VAL = UD.GRADE
+    		LEFT OUTER JOIN DBO.FCMT_CD(1, 1, 'DUTY') DT ON DT.CD_VAL = UD.DUTY
+		WHERE 
+			U.fire_yn <> 0 and UD.hold_office <> 3 and D.dept_nm like '%' + #{keyword} + '%'
+		ORDER BY UD.duty asc, UD.grade asc
+		]]>
+    </select>
+    
+     <select id="getContactByPhoneList" parameterType="String" resultType="Map">
+    	<![CDATA[
+		SELECT
+			C.co_nm AS company_name,	 
+			D.dept_id, 
+			D.dept_nm AS department, 
+			U.user_id AS contact_uid, 
+			U.user_nm AS full_name, 
+			U.email_id + '@' + C.c_domain AS email, 
+			UD.tel1 + '-' + UD.tel2 + '-' + UD.tel3 + '(' + UD.tel4 + ')' AS company_telephone, 
+			U.tel1 + '-' + U.tel2 + '-' + U.tel3 AS home_tell, 
+			U.mobile1+'-'+U.mobile2+'-'+U.mobile3 AS  mobile_number, 
+			UD.fax1 + '-' + UD.fax2 + '-' + UD.fax3 AS fax_number, 						
+			U.zip_addr, 
+			U.detail_addr, 
+			U.zip_cd, 
+			U.char_biz, 
+			case U.photo_nm when '' then 'http://218.55.79.87/KOR_WEBROOT/IMAGE/COMMON/nopic.gif' else 'http://218.55.79.87/KOR_WEBROOT/UPLOAD/346/EMPPIC/'  +  U.photo_nm End as photoUrl, 
+    		GRA.CD_NM as grade,
+    		DT.CD_NM as title
+		FROM 
+			TCMG_USER U 
+			INNER JOIN TCMG_USERDEPT UD ON U.user_id = UD.user_id 
+			INNER JOIN TCMG_DEPT D ON UD.dept_id = D.dept_id AND D.USE_YN = 1 
+			INNER JOIN TCMG_WORK W ON UD.deptwork_id = W.dept_id AND W.USE_YN = 1 
+			INNER JOIN TCMG_CO C ON C.co_id = D.co_id AND C.USE_YN = 1 
+    		LEFT OUTER JOIN DBO.FCMT_CD(1, 1,'GRADE') GRA ON GRA.CD_VAL = UD.GRADE
+    		LEFT OUTER JOIN DBO.FCMT_CD(1, 1, 'DUTY') DT ON DT.CD_VAL = UD.DUTY
+		WHERE 
+			U.fire_yn <> 0 and UD.hold_office <> 3 
+			and  ( (U.mobile1+U.mobile2+U.mobile3) like '%' + #{keyword} + '%' OR  (UD.tel1 + UD.tel2 + UD.tel3) like '%' + #{keyword} + '%')
+		ORDER BY UD.duty asc, UD.grade asc
+		]]>
+    </select>
+    
+</mapper>

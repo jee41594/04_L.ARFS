@@ -1,0 +1,22 @@
+package step01.one;
+
+public class Test2 {
+	
+	int a(int i, int j){
+		
+		return i+j;
+	}
+	int a(int i, int j, int k){
+		
+		return i+j+k;
+	}
+	
+	a1(int i, int j){
+	
+		System.out.println();
+	}
+
+	public static void main(String[] args) {
+	}
+
+}

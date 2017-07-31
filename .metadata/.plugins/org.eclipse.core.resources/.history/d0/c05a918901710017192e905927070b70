@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="LARFSClient">
+        <property name="context-root" value="LARFSClient"/>
+        <property name="java-output-path" value="/LARFSClient/build/classes"/>
+    </wb-module>
+</project-modules>

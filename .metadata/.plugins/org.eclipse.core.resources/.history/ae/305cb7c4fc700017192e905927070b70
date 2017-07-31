@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<properties>
+		<property name="DATABASE" value="ORACLE" />
+	</properties>
+	
+	<typeAliases>
+		<typeAlias type="kr.co.ldcc.lemp.db.type.DBMap" alias="DefaultMap" />
+		<typeAlias type="java.lang.Integer" alias="Integer" />
+		<typeAlias type="java.lang.String" alias="String" />
+	</typeAliases>
+	<typeHandlers>
+		<typeHandler javaType="boolean" jdbcType="CHAR" handler="kr.co.ldcc.common.mybatis.handler.BooleanCharTypeHandler" />
+		<typeHandler javaType="boolean" jdbcType="VARCHAR" handler="kr.co.ldcc.common.mybatis.handler.BooleanCharTypeHandler" />
+	</typeHandlers>
+
+	<environments default="LegacyDB">
+		<environment id="LegacyDB">
+			<transactionManager type="JDBC" />
+			<dataSource type="JNDI">
+				<property name="initial_context" value="${initial_context}"/>
+				<property name="data_source" value="LegacyDS" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper url="file:///${lempCustHome}/conf/sql/${DATABASE}/TT0001.xml" />
+		<mapper url="file:///${lempCustHome}/conf/sql/${DATABASE}/TT0002.xml" />
+		<mapper url="file:///${lempCustHome}/conf/sql/${DATABASE}/TT0003.xml" />
+	</mappers>
+</configuration>

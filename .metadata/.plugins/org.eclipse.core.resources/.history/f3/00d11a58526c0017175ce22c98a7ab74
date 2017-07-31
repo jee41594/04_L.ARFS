@@ -1,0 +1,18 @@
+var page = {
+	init : function(event) {
+		page.initdata(event.data);
+	},
+	initData : function(data) {
+		LEMP.Network.requestTr({
+		    "_sTrcode" : "DM0003",
+		    "_oBody" : {
+		        "docId" :Number(data.docId)
+		    },
+		    "_fCallback" : function(resDM0003){
+		    	alert(JSON.stringify);
+		    }
+		});
+	}
+		
+	
+}

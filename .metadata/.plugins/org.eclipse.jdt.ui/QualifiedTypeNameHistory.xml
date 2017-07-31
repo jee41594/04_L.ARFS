@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="model.DM0001.DM0001Request"/>
+<fullyQualifiedTypeName name="model.header.DMheader"/>
+<fullyQualifiedTypeName name="model.DM0001.DM0001Request_Body"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="java.lang.StackOverflowError"/>
+<fullyQualifiedTypeName name="model.DM0001.DM0001Response"/>
+<fullyQualifiedTypeName name="model.DM0001.DM0001Response_Body"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="kr.co.ldcc.lemp.adapter.DBAdapter"/>
+<fullyQualifiedTypeName name="data.UserInfo"/>
+<fullyQualifiedTypeName name="kr.co.ldcc.common.util.JsonUtil"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.node.ObjectNode"/>
+<fullyQualifiedTypeName name="kr.co.ldcc.lemp.hybrid.common.server.JsonAdaptorObject"/>
+<fullyQualifiedTypeName name="kr.co.ldcc.lemp.hybrid.common.server.JsonAdaptorObject.TYPE"/>
+<fullyQualifiedTypeName name="model.DM0004.DM0004Response"/>
+<fullyQualifiedTypeName name="step01.one.Test"/>
+<fullyQualifiedTypeName name="step01.one.StaticTest"/>
+<fullyQualifiedTypeName name="java.util.Stack"/>
+<fullyQualifiedTypeName name="java.io.ObjectInputStream.GetField"/>
+<fullyQualifiedTypeName name="step01.one.TotalReview"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.security.AllPermission"/>
+<fullyQualifiedTypeName name="step03.PersonDTO"/>
+<fullyQualifiedTypeName name="step01.one.Parent"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="step01.one.Child"/>
+</qualifiedTypeNameHistroy>

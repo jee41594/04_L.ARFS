@@ -1,0 +1,35 @@
+{
+	"URL":{
+		"LOGIN":"LGN/html/LGN0001.html",
+		"MAIN" : ["MAN/html/MAN0001.html"]
+	},
+
+	"CONTEXT" : {
+		"BACKGROUNDCOLOR":"FF534334",
+		"TEXTCOLOR" : "FFFFFFFF"
+	},
+	"TITLEBAR" : {
+		"TEXTCOLOR":"FFFFFF45",
+		"BACKGROUNDIMAGE" : "common/images/bg.png",
+		"BACKGROUNDCOLOR" : "FF645353",
+		"VISIBLE" : false,
+		"HEIGHT" : 44,
+        "TEXTSIZE" : 22,
+        "FIXLAYER": {
+              
+ 		}
+		
+	},
+	"WEBVIEW" : {
+		"MAXIMUMCOUNT" : 8,
+		"BACKGROUNDCOLOR" : {
+								"NORMAL" : "FFFFFFFF",
+								"DIALOG" : "FFFFFFFF"
+							},
+		"DIALOGOUTSIDECOLOR" : "AA000000"
+	},
+	"PUSH" : {
+       "URL" : "http://lempedu.ldcc.co.kr:80/lemppush/v150/push",
+       "PRODUCTID" : "229364845575"
+	}
+}

@@ -1,0 +1,25 @@
+package step04;
+
+public class AccessTest {
+
+	public static void main(String[] args) {
+		C c = new C();
+		System.out.println(c.b.bm);
+
+	}
+
+}
+
+class A{
+	String am = "A";
+}
+
+class B{
+	String bm = "B";
+	A a = new A();
+}
+
+class C{
+	String cm = "C";
+	B b = new B();
+}

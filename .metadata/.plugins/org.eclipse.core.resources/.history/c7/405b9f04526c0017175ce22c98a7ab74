@@ -1,0 +1,118 @@
+var page = {
+	init : function() {
+
+		page.initLayout();
+		page.initData();
+		page.initInterface();
+	},
+	initLayout : function() {
+
+		// 타이틀 바, 툴바를  만듬
+		// 타이틀 바
+		var backBtn = LEMP.Window.createElement({
+		    "_sElementName" : "ImageButton"
+		});
+		
+		backBtn.setProperty({
+		    "_sImagePath" : "common/images/btn_before.png",
+		    "_fCallback" : function()   {
+		    	LEMP.Window.close();
+		    }
+		});
+		
+		
+		var titleBar = LEMP.Window.createTitleBar();
+		
+		titleBar.setProperty({
+			"_sImagePath": "common/images/titlebar.png",
+			"_aLeftImageButton" :[backBtn]
+		});
+		
+		var homeBtn = LEMP.Window.createElement({ 
+		    "_sElementName" : "ImageButton"
+		});
+		
+		homeBtn.setProperty({
+		    "_sImagePath" : "common/images/tbb_home.png",
+		    "_fCallback" : function()   {
+		    	LEMP.Window.open({
+				    "_sPagePath" : "MAN/html/MAN0001.html"
+				});
+		    }
+		});
+		 
+		
+		
+		var newBtn = LEMP.Window.createElement({ 
+		    "_sElementName" : "ImageButton"
+		});
+		
+		newBtn.setProperty({
+		    "_sImagePath" : "common/images/tbb_day_registration.png",
+		    "_fCallback" : function()   {
+		    	LEMP.Window.open({
+				    "_sPagePath" : "NTC/html/NTC0003.html"
+				});
+		    }
+		});
+		
+		var toolBar = LEMP.Window.createToolBar({
+		    "_aImageButton" : [ homeBtn, newBtn ]
+		});
+
+		
+		
+		
+		LEMP.Window.draw({
+		    "_aElement" : [titleBar,toolBar]
+		});
+		
+	},
+	initData: function() {
+		//DM0002 전문호출 
+		//NETWORK
+		LEMP.Network.requestTr({
+		    "_sTrcode" : "DM0002",
+		    "_oBody" : {
+		        "startIndex" : 0,
+		        "endIndex" : 400
+		    },
+		    "_fCallback" : function(resDM0002){
+		       page.renderList(resDM0002.body);
+		    }
+		});
+	},
+	renderList : function(data){
+
+		var dir = [
+		{
+		"type" : "loop",
+		"target" : ".record",
+		"value" : "list",
+		"detail" :
+		[
+		 { "type" : "single", "target" : "@docId", "value" : "docId" },
+		 { "type" : "single", "target" : ".titleName", "value" : "title" },
+		 { "type" : "single", "target" : ".date", "value" : 
+		 function(arg) { return (arg.item.regDate).LPToFormatDate("yyyy-mm-dd"); }},
+		 { "type" : "single", "target" : ".name", "value" : "userName" },
+		 { "type" : "single", "target" : ".division", "value" : "deptName" }
+		]
+		}
+		];
+
+		$("#list01").LPRender(data, dir);
+	},
+	initInterface : function() {
+		$("#listSection").delegate("li","click",function(){
+			var docID = $(this).attr("docId");
+			LEMP.Window.open({
+				"_sPagePath" : "NTC/html/NTC0002.html",
+				"_oMessage" :{
+					"docId": docID
+				}
+			})
+			
+		});
+	}
+}

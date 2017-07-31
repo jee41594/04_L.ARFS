@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment />
+	<entry key="default">off</entry>
+	
+	<entry key="LOGIN">off</entry>
+	<entry key="LOGOUT">off</entry>
+	<entry key="ZZ0010">off</entry>
+	<entry key="ZZ0008">off</entry>
+	<entry key="ZZ0007">off</entry>
+	<entry key="ZZ0006">off</entry>
+	<entry key="ZZ0005">off</entry>
+	<entry key="ZZ0004">off</entry>
+	<entry key="ZZ0011">off</entry>
+</properties>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache>
+    <diskStore path="java.io.tmpdir"/>
+
+    <defaultCache
+            maxElementsInMemory="100"
+            eternal="false"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="300"
+            overflowToDisk="true"
+            maxElementsOnDisk="1000"
+            diskPersistent="false"
+            diskExpiryThreadIntervalSeconds="150"
+            memoryStoreEvictionPolicy="LRU"
+            />
+            
+	
+   <!-- 
+	lemp_update cache for update
+	maxElementsInMemory 개수는 {지원 OS 개수} * ( {지원 display 개수} * 2 + 1 )
+   -->
+   <cache name="lemp_update"
+           maxElementsInMemory="6"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="0"
+           overflowToDisk="false"
+           diskPersistent="false"  
+           diskExpiryThreadIntervalSeconds="600"
+           memoryStoreEvictionPolicy="LFU">
+   </cache>         
+   
+   <cache name="MultiLogin"
+            maxElementsInMemory="1000"
+            memoryStoreEvictionPolicy="LRU" 
+            overflowToDisk="true"
+            diskPersistent="false"
+            maxElementsOnDisk="0"
+            eternal="false"
+            timeToIdleSeconds="0"
+            timeToLiveSeconds="0"
+            />   
+</ehcache>

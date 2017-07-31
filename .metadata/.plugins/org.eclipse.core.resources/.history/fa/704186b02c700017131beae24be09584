@@ -1,0 +1,27 @@
+package step01.one;
+
+public class Test2 {
+	
+	int a(int i, int j){
+		
+		return i+j;
+	}
+	int a(int i, int j, int k){
+		
+		return i+j+k;
+	}
+	
+	void a1(int i, int j){
+		
+		System.out.println(i-j);
+	}
+
+	public static void main(String[] args) {
+	Test2 t = new Test2();
+	Test t1 = new Test();
+	
+	System.out.println(t.no2+" "+t.no1);
+	t.a1(3, 5);
+	}
+
+}

@@ -1,0 +1,26 @@
+package step01.one;
+
+public class StaticTest {
+	
+	int a;
+	static int b;
+	
+	StaticTest(){
+		a++;
+		b++;
+	}
+	
+	static{
+		System.out.println(2);
+	}
+//	\u000
+	public static void main(String[] args) {
+		StaticTest s = new StaticTest();
+		
+		System.out.println(s.a+b);
+
+	}
+	static{
+		System.out.println(1);
+	}
+}

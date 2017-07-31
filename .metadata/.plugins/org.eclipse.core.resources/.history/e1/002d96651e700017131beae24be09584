@@ -1,0 +1,19 @@
+package step01.one;
+
+public class Test {
+	int no1 ;
+	int no2 = 10;
+	int no3 = 20;
+	
+	Test(){}
+	Test(int i){
+		
+	}
+	public static void main(String[] args) {
+	Test t = new Test();
+	t.no1 = 100;
+	System.out.println(t.no2+" "+t.no1);
+
+	}
+
+}

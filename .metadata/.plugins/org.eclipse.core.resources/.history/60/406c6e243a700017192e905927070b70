@@ -1,0 +1,8 @@
+package step01.one;
+
+public class TotalReview {
+
+	public static void main(String[] args) {
+	}
+
+}

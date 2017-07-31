@@ -1,0 +1,71 @@
+package step04;
+
+import step03.PersonDTO;
+
+public class ArrayTest1 {
+	
+	public static int[] getIntArray(){
+		
+//		int [][] i ={
+//				{1,2,3,4},{2,3,4,5}
+//		};
+
+		int[] i ={1,2,3};
+		return i;
+	}
+	
+	public static void viewArray(int[] all) {
+		for(int i = 0; i<all.length; i++){
+			System.out.println(all[i]);
+		}
+			System.out.println("향상된for문");
+		for(int v: all ){
+			System.out.println(v+"\t");
+		}
+	}
+	
+	public static PersonDTO[]  getPersonDTO() {
+		PersonDTO[] P = {
+				new PersonDTO("김경진",31,"잼실"),
+				new PersonDTO("김경진",31,"잼실"),
+				new PersonDTO("김경진",31,"잼실")};		
+		return P;
+		
+	}
+	
+	public static void printPersons(PersonDTO all) {
+		for(PersonDTO v : all){
+			System.out.println(v.toString());
+		}
+	}
+	
+	
+	
+	public static String[] getStringArray(){
+		
+
+		String [] frind = {"김연규" ,"오민석","이준희"};
+		return frind;
+		
+	}
+	
+	public static void viewArray2(String[] all2) {
+		for(int i = 0; i<all2.length; i++){
+			System.out.println(all2[i]);
+		}
+			System.out.println("향상된for문");
+		for(String v: all2 ){
+			System.out.println(v+"\t");
+		}
+	}
+	
+	
+	
+	
+	public static void main(String[] args) {
+		String[] all2 = getStringArray();
+		viewArray2(all2);
+		
+	}
+
+}

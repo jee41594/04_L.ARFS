@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+#mainWrap {position:relative; height:100%; background:#ececec url("../images/bg_pattern.png") repeat 0 0;}
+h1 {height:50px; margin-bottom:10px; font-size:1.2em; color:#fff; line-height:50px; text-align:center; text-indent:-9999em; background:url("../images/logo.png") no-repeat 10px bottom; background-size:auto 70%; overflow:hidden;}
+.new_contents {padding:5px 5%; text-align:right; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box;}
+.new_contents button {display:inline-block; position:relative; min-width:4em; padding-top:40px; font-size:0.9em; text-align:center;}
+.new_contents .batch {position:absolute; right:-1px; top:-1px; width:20px; height:20px; font-size:0.9em; color:#fff; text-align:center; line-height:20px;
+	background:url("../images/bg_batch.png") repeat-x 0 0; background-size:1px 100%;
+	border:2px solid #fff; border-radius:12px;
+}
+.new_contents .mail {background:url("../images/ico_mail.png") no-repeat center 5px; background-size:auto 22px;}
+.new_contents .schedule {background:url("../images/ico_cal.png") no-repeat center 0; background-size:auto 33px;}
+.new_contents .approval {background:url("../images/ico_approval.png") no-repeat center 2px; background-size:auto 32px;}
+.new_contents .refresh {background:url("../images/btn_refresh.png") no-repeat center 2px; background-size:32px auto;}
+"WebContent/contents/LEMP/config/app.config"
+.menu {position:absolute; left:5%; top:300px; bottom:20px; width:90%; background:url("../images/bg_pattern.png") repeat 0 0; border:2px solid #fff; border-radius:10px; box-shadow:1px 2px 3px rgba(0,0,0,0.2); box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; overflow:hidden;}
+.menu li {position:absolute; width:32%; background:url("../images/bg_pattern.png") repeat 0 0; overflow:hidden;}
+.menu button {width:100%; height:100%;
+	font-weight:bold; font-size:1.1em; color:#fff; text-align:center; text-shadow:1px -1px 2px rgba(0,0,0,0.3);
+	background-repeat:no-repeat; background-position:center 80%; background-size:110px auto; overflow:hidden;
+}
+.menu button span {position:absolute; left:0; top:0; width:100%; padding:1em 10px; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box;}
+.menu .approval, .menu .mail {width:50%;}
+
+.menu .mail_write {left:36%; top:0; height:45%; background-color:#09c8bb;}
+.menu .mail_write button {text-align:center;
+	background-image:url("../images/menu_mail_write.png"); background-size:100% auto;
+}
+.menu .schedule {left:36%; top:45%; height:39%; background-color:#a8b536;}
+.menu .schedule button {background-image:url("../images/menu_schedule.png"); background-size:100% auto;}
+.menu .shoppingCart {left:0; top:0; height:50%; background-color:#874ff8; border-top-left-radius:10px;}
+.menu .shoppingCart button {text-align:center;  background-position:right 90%; border-top-left-radius:12px;}
+.menu .shoppingStock {left:0; top:50%; height:50%; background-color:#ff7085; border-bottom-left-radius:10px;}
+.menu .shoppingStock button {text-align:left; background-image:url("../images/menu_mail.png"); background-position:90% bottom; border-bottom-left-radius:12px;}
+.menu .barcodeReader {right:0; top:0; width:50%; height:50%; background-color:#5d82cc; z-index:10; border-top-right-radius:10px;}
+.menu .barcodeReader button {background-image:url("../images/menu_notice.png"); border-top-right-radius:12px;}
+.menu .board {right:0; top:45%; width:33%; height:39%; background-color:#084475;}
+.menu .board button {background-image:url("../images/menu_board.png"); background-size:60% auto;}
+.menu .myInfo {left:50%; bottom:0; right:0; width:auto; height:50%; background-color:#180153; border-top-left-radius:10px;}
+.menu .myInfo button { background-size:auto 100%; border-top-left-radius:10px;}
+.menu .myInfo span {width:50%; top:50%; margin-top:-0.5em; padding:0; text-align:center;}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment />
+	<entry key="HEALTH_CHECK">false</entry>
+	<entry key="URL_PORT">8080</entry>
+	<entry key="HEALTH_URL">/LEMP-Document-Server/ping.jsp</entry>
+	<entry key="URL_IPS">218.55.79.110</entry>
+	<entry key="URL_SCHEME">http</entry>
+	<entry key="AVAILABLE_FILE_TYPE">ppt, pptx, xls, xlsx, doc, docx, html, htm, mht,mhtml, hwp, txt, gul, pdf</entry>
+	<entry key="HEALTH_CHECK_TIMEOUT">1000</entry>
+	<entry key="IMAGE_TYPE">png</entry>
+	<entry key="URL_ROOT">/LEMP-Document-Server/message/MessageServlet</entry>
+	<entry key="DELAY_SECONDS">3</entry>
+	<entry key="HEALTH_TRY_COUNT">2</entry>
+	<entry key="IMAGE_FILE_TYPE">png,jpg,jpeg,gif</entry>
+</properties>

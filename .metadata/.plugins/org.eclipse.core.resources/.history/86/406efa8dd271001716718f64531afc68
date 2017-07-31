@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../css/main.css" />
+	<script type="text/javascript" src="../../LEMP/LEMP.js"></script>
+	<script type="text/javascript" src="../js/MAN0001.js"></script>
+	<title>Main</title>
+</head>
+<body class="t">	<!-- Tablet 의 경우 t 클래스 추가 -->
+<div id="mainWrap" >
+	<h1>LDCC</h1>"C:/Users/LOTTE/AppData/Local/Temp/BNZ.597841f11b1239f/MAN0001.js"
+	<div >
+		<ul>
+			<li>
+				<ul class="menu">
+					<li class="barcodeReader"><button type="button"><span>바코드리더기</span></button></li>
+					<li class="shoppingCart"><button type="button"><span>장바구니</span></button></li>
+					<li class="shoppingStock"><button type="button"><span>재고관리</span></button></li>
+					<li class="myInfo"><button type="button"><span>개인정보관리</span></button></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+var page = {
+		init : function(){
+			
+			page.initInterface();
+			
+		},
+		initInterface : function() {
+			
+			alert("환연합니다.");
+		
+		}
+}

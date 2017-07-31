@@ -1,0 +1,14 @@
+var page = {
+		
+	init:function()
+	{
+		page.initInterface();
+	},
+	
+	initInterface : function()
+	{
+		$("#Test1").click(function(){
+			// Write Test Source 
+		});
+	}
+};

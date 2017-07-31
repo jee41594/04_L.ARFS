@@ -1,0 +1,64 @@
+{
+  "license_no" : "201707200001",
+  "customer_no" : "20170720",
+  "deploy_type" : "TEST",
+  "validation" : {
+    "from_license" : "20170720",
+    "to_license" : "20170920",
+    "license_type" : "UNLIMIT",
+    "company_count" : 9999,
+    "admin_count" : 9999,
+    "user_count" : 0,
+    "device_count" : 0,
+    "server_ips" : [ "127.0.0.1" ]
+  },
+  "app_license" : [ {
+    "app_key" : "LM10ANP0",
+    "app_name" : "L.EMP 1.0 Android"
+  }, {
+    "app_key" : "LM10IOP0",
+    "app_name" : "L.EMP 1.0 iOS"
+  }, {
+    "app_key" : "LM20ANP0",
+    "app_name" : "L.EMP 2.0 Android"
+  }, {
+    "app_key" : "LM30IOP0",
+    "app_name" : "L.EMP 3.0 iOS"
+  }, {
+    "app_key" : "LM30ANP0",
+    "app_name" : "L.EMP 3.0 Android"
+  }, {
+    "app_key" : "LM20IOP0",
+    "app_name" : "L.EMP 2.0 iOS"
+  }, {
+    "app_key" : "LN04ANP0",
+    "app_name" : "L.EMP 4.0 Android_NEW"
+  }, {
+    "app_key" : "LN06ANP0",
+    "app_name" : "L.EMP 6.0 Android_NEW"
+  }, {
+    "app_key" : "LN07ANP0",
+    "app_name" : "L.EMP 7.0 Android_NEW"
+  }, {
+    "app_key" : "LN08ANP0",
+    "app_name" : "L.EMP 8.0 Android_NEW"
+  }, {
+    "app_key" : "LN09ANP0",
+    "app_name" : "L.EMP 9.0 Android_NEW"
+  }, {
+    "app_key" : "LN10ANP0",
+    "app_name" : "L.EMP 10.0 Android_NEW"
+  }, {
+    "app_key" : "LN12ANP0",
+    "app_name" : "L.EMP 12.0 Android_NEW"
+  }, {
+    "app_key" : "LN15ANP0",
+    "app_name" : "L.EMP 15.0 Android_NEW"
+  }, {
+    "app_key" : "LN17ANP0",
+    "app_name" : "L.EMP 17.0 Android_NEW"
+  }, {
+    "app_key" : "LN18ANP0",
+    "app_name" : "L.EMP 18.0 Android_NEW"
+  } ]
+}

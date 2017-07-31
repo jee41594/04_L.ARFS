@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+--><!-- The contents of this file will be loaded for each web application --><Context>
+
+    <!-- Default set of monitored resources -->
+    <WatchedResource>WEB-INF/web.xml</WatchedResource>
+	
+    <!-- Uncomment this to disable session persistence across Tomcat restarts -->
+    <!--
+    <Manager pathname="" />
+    -->
+
+    <!-- Uncomment this to enable Comet connection tacking (provides events
+         on session expiration as well as webapp lifecycle) -->
+    <!--
+    <Valve className="org.apache.catalina.valves.CometConnectionManagerValve" />
+    -->
+    
+    <!-- LEGACY -->
+	<Resource
+        name="LegacyDS"
+        auth="Container"
+        type="javax.sql.DataSource"
+        driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+        url="jdbc:sqlserver://10.131.4.131:1433;databaseName=demo"
+        username="userdemo"
+        password="p@ssw0rd"
+        validationQuery="SELECT 1"
+        maxActive="100"
+        maxIdle="20"
+        maxWait="-1"
+     />
+     
+    <!-- LEMP -->
+	<Resource
+        name="LEMPDS"
+        auth="Container"
+        type="javax.sql.DataSource"
+        driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+        url="jdbc:sqlserver://10.131.4.131:1433;databaseName=lemp"
+        username="userlemp"
+        password="p@ssw0rd"
+        validationQuery="SELECT 1"
+        maxActive="100"
+        maxIdle="20"
+        maxWait="-1"
+     />
+     
+		<!--team4 -->
+     	<Resource
+        name="LegacyDS"
+        auth="Container"
+        type="javax.sql.DataSource"
+        driverClassName="org.postgresql.Driver"
+        url="jdbc:postgresql://127.0.0.1:5432/team4"
+        username="team4"
+        password="team4"
+      
+        maxActive="100"
+        maxIdle="20"
+        maxWait="-1"
+     />
+<Resource auth="Container36" 
+           driverClassName="org.postgresql.Driver" 
+           maxActive="70" 
+           maxIdle="10" 
+           maxWait="-1" 
+           name="jdbc/eprism20" 
+           password="eprism20" 
+           type="javax.sql.DataSource" 
+           url="jdbc:postgresql://127.0.0.1:5432/eprism20" 
+           username="eprism20" /> 
+</Context>

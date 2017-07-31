@@ -1,0 +1,20 @@
+var page = {
+		init : function(){
+			
+			page.initInterface();
+			
+		},
+		initInterface : function() {
+			
+				//1.  Login 버튼 클릭
+				//2. 사용자가 입력한 ID, PWD read
+				//3. DM001전문 호출 
+				// 
+			
+			$(".bt_login").click(function name() {
+				
+				var userId = $("#user_id").val();
+				var userPwd = $("#user_pw").val();
+			});
+		}
+}

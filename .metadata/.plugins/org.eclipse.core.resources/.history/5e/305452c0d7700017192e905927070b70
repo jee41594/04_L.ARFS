@@ -1,0 +1,14 @@
+package step04;
+
+public class ApiTest {
+
+	public static void main(String[] args) {
+		String msg = "2017년 상반기 신입직원";
+		System.out.println(msg.length());
+		System.out.println(msg.charAt(11));
+		System.out.println(msg.indexOf(0, 3));
+		
+	
+	}
+
+}

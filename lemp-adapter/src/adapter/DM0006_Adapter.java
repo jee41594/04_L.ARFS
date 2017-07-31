@@ -1,0 +1,65 @@
+package adapter;
+
+import java.util.HashMap;
+
+import model.DM0006.DM0006Request;
+import model.DM0006.DM0006Request_Body;
+import model.DM0006.DM0006Response;
+import model.header.DMheader;
+
+import org.codehaus.jackson.node.ObjectNode;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import kr.co.ldcc.lemp.adapter.AbstractTemplateAdapter;
+import kr.co.ldcc.lemp.adapter.DBAdapter;
+import kr.co.ldcc.lemp.hybrid.adapter.api.Adapter;
+import kr.co.ldcc.lemp.hybrid.adapter.api.IAdapterJob;
+import kr.co.ldcc.lemp.hybrid.common.server.JsonAdaptorObject;
+
+@Adapter(trcode = { "DM0006" })
+public class DM0006_Adapter extends AbstractTemplateAdapter implements
+		IAdapterJob {
+
+	private static final Logger logger = LoggerFactory
+			.getLogger(DM0006_Adapter.class);
+	@Autowired
+	private DBAdapter dbAdapter;
+
+	public JsonAdaptorObject onProcess(JsonAdaptorObject obj) {
+
+		
+		DM0006Request request = new DM0006Request(obj);
+		DMheader header = request.getHeader();
+		DM0006Request_Body reqBody = request.getBody();
+		ObjectNode sessionNode = (ObjectNode) obj.get(JsonAdaptorObject.TYPE.META);
+		
+		try {
+			String title = reqBody.getTitle();
+			String contents = reqBody.getContents();
+			int docId = reqBody.getDocId();
+
+			HashMap<String, Object> inputPrameterMap = new HashMap<String, Object>();
+			inputPrameterMap.put("title", title);
+			inputPrameterMap.put("contents", contents);
+			inputPrameterMap.put("docId", docId);
+			int insertResult = dbAdapter.insert("LegacyDB", "DM0006.6001", inputPrameterMap);
+			
+		
+			if (insertResult < 1) {
+				logger.error("게시물 등록 실패!!");
+				return makeFailResponse("DM0006ERR002", "게시물 등록 중 오류가 발생했습니다.");
+			}
+			
+			DM0006Response response = new DM0006Response();
+			response.setHeader(header);
+			return makeResponse(obj, response.toJsonNode());
+			
+		} catch (Exception e) {
+			logger.error("어뎁터 에러", e);
+			return makeFailResponse("DM0006ERR001", "어뎁터에서 로직 처리중 에러가 발생 하였습니다");
+		}
+	}
+
+}
